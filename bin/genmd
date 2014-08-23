@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+/**
+ * mpvs
+ */
+var md       = require("markdox"),
+    fs       = require("fs"),
+    libpath  =  "./lib/",
+    trgtpath =  "./doc/",
+    files    = fs.readdirSync(libpath);
+
+  md.process("./app.js", trgtpath + "/app.js.md", function(){
+    console.log("app.js.md generated");
+  });
+
+ for(var i = 0; i < files.length; i++){
+  md.process(libpath  + files[i], trgtpath + files[i] + ".md", function(f){
+
+    return function(){
+      console.log(f + " generated");
+    }
+  }(files[i] + ".md"));
+ }

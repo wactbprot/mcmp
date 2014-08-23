@@ -1,0 +1,25 @@
+{
+    "author": "wactbprot",
+    "name": "mcmp",
+    "description": "ssmp client which (will) look like mc",
+    "version": "0.0.1",
+    "repository": {
+        "type":"git",
+        "url": "https://github.com/wactbprot/mcmp"
+    },
+    "dependencies": {
+	"blessed":">=0.0.37"
+    },
+    "scripts": {
+	"doc":"bin/genmd"
+    },
+    "devDependencies": {
+	"mocha":">=1.20.1",
+	"istanbul":">=0.3.0",
+	"markdox":">=0.1.4"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
